@@ -1,0 +1,13 @@
+import pyqrcode
+import png
+
+
+def qrcode(data):
+    q =pyqrcode.create(data)
+    q.png('QR Code.png' , scale =6)
+    print('QR Code Generated! ')
+    print(png.__version__)
+
+
+Data = "https://en.wikipedia.org/wiki/N._T._Rama_Rao_Jr."
+qrcode('https://en.wikipedia.org/wiki/N._T._Rama_Rao_Jr.')
